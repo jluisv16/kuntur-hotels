@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Colores del tema como tripletas RGB separadas por espacios.
+  Los componentes usan nombres semánticos (bg-surface, text-fg, border-line),
+  así casi nunca hace falta escribir clases dark: en cada componente.
+  Para cambiar la paleta de un hotel o de la marca, se editan solo estas variables.
+*/
+@layer base {
+  :root {
+    color-scheme: light;
+    --color-app: 244 246 248;
+    --color-surface: 255 255 255;
+    --color-surface-alt: 241 245 249;
+    --color-line: 226 232 240;
+    --color-fg: 31 41 55;
+    --color-fg-muted: 100 116 139;
+    --color-primary: 37 99 235;
+    --color-success: 21 128 61;
+    --color-warning: 180 83 9;
+    --color-danger: 185 28 28;
+    --color-on-accent: 255 255 255;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --color-app: 15 23 42;
+    --color-surface: 30 41 59;
+    --color-surface-alt: 39 51 71;
+    --color-line: 51 65 85;
+    --color-fg: 226 232 240;
+    --color-fg-muted: 148 163 184;
+    --color-primary: 96 165 250;
+    --color-success: 74 222 128;
+    --color-warning: 251 191 36;
+    --color-danger: 248 113 113;
+    --color-on-accent: 15 23 42;
+  }
+
+  body {
+    @apply bg-app text-fg antialiased;
+  }
+}
