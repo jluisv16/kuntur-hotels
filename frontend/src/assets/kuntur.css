@@ -113,3 +113,9 @@ textarea.k-input { height: auto; padding: 10px 12px; resize: vertical; }
   .welcome .txt { animation: none; }
 }
 .k-card { min-width: 0; }
+
+/* Móvil: las tablas se desplazan de lado dentro de su tarjeta en vez de cortarse. */
+@media (max-width: 767px) {
+  .k-card { overflow-x: auto; }
+  .k-table { min-width: 560px; }
+}
