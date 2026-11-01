@@ -70,7 +70,7 @@ function res(id: string, room: string, guest: string, start: number, end: number
 
 export const RESERVATIONS: Reservation[] = [
   { ...res('R-2041', '101', 'Pérez Ruiz, Jorge', -3, 0, 'inhouse', 'Directo', 40), paid: 300 },
-  res('R-2042', '103', 'García Soto, Marta', -2, 0, 'inhouse', 'Booking', 0, true),
+  res('R-2042', '103', 'Huamán Reyes, Marta', -2, 0, 'inhouse', 'Booking', 0, true),
   res('R-2043', '201', 'Herrera Díaz, Luis', -1, 0, 'inhouse', 'Airbnb', 0, true),
   res('R-2044', '301', 'Ortega Ruiz, Pablo', -4, 0, 'inhouse', 'Directo', 0, true),
   res('R-2045', '104', 'Castillo Vera, Elena', -2, 2, 'inhouse', 'Booking', 0, true, 2),
@@ -81,7 +81,7 @@ export const RESERVATIONS: Reservation[] = [
   res('R-2050', '306', 'Delgado Ríos, Mateo', -5, 1, 'inhouse', 'Directo', 0, true, 1),
   res('R-2051', '105', 'Mendoza Ríos, Carla', 0, 3, 'confirmed', 'Directo'),
   res('R-2052', '106', 'Rodríguez Silva, Luis', 0, 2, 'confirmed', 'Booking'),
-  res('R-2053', '206', 'Torres López, Ana', 0, 4, 'confirmed', 'Directo', 0, false, 3),
+  res('R-2053', '206', 'Torres Restrepo, Ana', 0, 4, 'confirmed', 'Directo', 0, false, 3),
   res('R-2054', '302', 'Vega Castro, Iván', 0, 2, 'confirmed', 'Airbnb'),
   res('R-2055', '102', 'Núñez Paredes, Rosa', 0, 1, 'confirmed', 'Directo', 0, false, 1),
   res('R-2056', '101', 'Soto Medina, Raquel', 1, 4, 'confirmed', 'Booking'),
@@ -101,13 +101,13 @@ export const RESERVATIONS: Reservation[] = [
 ]
 
 export const GUESTS: Guest[] = [
-  ['Pérez Ruiz, Jorge', 'DNI 41822093', 'Perú', 'Lima', 3, '27 oct 2026'], ['García Soto, Marta', 'DNI 45120377', 'Perú', 'Arequipa', 1, '28 oct 2026'],
+  ['Pérez Ruiz, Jorge', 'DNI 41822093', 'Perú', 'Lima', 3, '27 oct 2026'], ['Huamán Reyes, Marta', 'DNI 45120377', 'Perú', 'Arequipa', 1, '28 oct 2026'],
   ['Herrera Díaz, Luis', 'Pasaporte AA1204558', 'México', 'Guadalajara', 1, '29 oct 2026'], ['Ortega Ruiz, Pablo', 'DNI 40977712', 'Perú', 'Trujillo', 5, '26 oct 2026'],
   ['Castillo Vera, Elena', 'DNI 70311854', 'Perú', 'Lima', 2, '28 oct 2026'], ['Fernández Mora, Raúl', 'Pasaporte PA882901', 'Argentina', 'Córdoba', 1, '29 oct 2026'],
   ['Salazar Peña, Inés', 'DNI 43829015', 'Perú', 'Cusco', 4, '27 oct 2026'], ['Bravo Núñez, Diego', 'Pasaporte XDE30127', 'Chile', 'Santiago', 2, '28 oct 2026'],
   ['Quispe Ramos, Lucía', 'DNI 46650218', 'Perú', 'Huancayo', 1, '29 oct 2026'], ['Delgado Ríos, Mateo', 'DNI 72104459', 'Perú', 'Piura', 6, '25 oct 2026'],
   ['Mendoza Ríos, Carla', 'DNI 44013265', 'Perú', 'Lima', 7, '12 sep 2026'], ['Rodríguez Silva, Luis', 'DNI 09822134', 'Perú', 'Ica', 2, '03 ago 2026'],
-  ['Torres López, Ana', 'Pasaporte BC771204', 'Colombia', 'Medellín', 1, 'Primera visita'], ['Vega Castro, Iván', 'DNI 47220931', 'Perú', 'Chiclayo', 3, '19 jun 2026'],
+  ['Torres Restrepo, Ana', 'Pasaporte BC771204', 'Colombia', 'Medellín', 1, 'Primera visita'], ['Vega Castro, Iván', 'DNI 47220931', 'Perú', 'Chiclayo', 3, '19 jun 2026'],
   ['Núñez Paredes, Rosa', 'DNI 40118876', 'Perú', 'Lima', 8, '02 oct 2026'], ['Soto Medina, Raquel', 'Pasaporte YT5521098', 'España', 'Madrid', 1, 'Primera visita'],
   ['Rojas Luna, Andrés', 'DNI 70448123', 'Perú', 'Lima', 2, '14 jul 2026'], ['Paz Aguirre, Sofía', 'DNI 48812906', 'Perú', 'Tacna', 1, 'Primera visita'],
 ].map(([name, doc, nat, origin, stays, last]) => ({ name, doc, nat, origin, stays, last, note: '' }) as Guest)
@@ -116,11 +116,11 @@ export const HK_CHECKS = ['Cama y ropa de cama', 'Baño y amenities', 'Piso y su
 export const HK_TASKS: HkTask[] = [
   { id: 'T-1', room: '202', kind: 'Limpieza de salida', staff: 'Carla Mendoza', state: 'doing', checks: [true, true, false, false, false], time: '13:40' },
   { id: 'T-2', room: '102', kind: 'Limpieza de salida', staff: 'Carla Mendoza', state: 'pending', checks: [false, false, false, false, false], time: '' },
-  { id: 'T-3', room: '205', kind: 'Limpieza de salida', staff: 'Ana López', state: 'pending', checks: [false, false, false, false, false], time: '' },
+  { id: 'T-3', room: '205', kind: 'Limpieza de salida', staff: 'Ana Villanueva', state: 'pending', checks: [false, false, false, false, false], time: '' },
   { id: 'T-4', room: '105', kind: 'Limpieza de salida', staff: 'Carla Mendoza', state: 'done', checks: [true, true, true, true, true], time: '10:55' },
-  { id: 'T-5', room: '106', kind: 'Limpieza de salida', staff: 'Ana López', state: 'done', checks: [true, true, true, true, true], time: '11:20' },
+  { id: 'T-5', room: '106', kind: 'Limpieza de salida', staff: 'Ana Villanueva', state: 'done', checks: [true, true, true, true, true], time: '11:20' },
   { id: 'T-6', room: '206', kind: 'Limpieza profunda', staff: 'Carla Mendoza', state: 'done', checks: [true, true, true, true, true], time: '12:10' },
-  { id: 'T-7', room: '302', kind: 'Limpieza de salida', staff: 'Ana López', state: 'done', checks: [true, true, true, true, true], time: '12:45' },
+  { id: 'T-7', room: '302', kind: 'Limpieza de salida', staff: 'Ana Villanueva', state: 'done', checks: [true, true, true, true, true], time: '12:45' },
 ]
 
 export const DAMAGE_CATALOG: { item: string; price: number }[] = [
@@ -132,7 +132,7 @@ export const INCIDENTS: Incident[] = [
   { id: 'INC-0146', date: '30 oct', room: '204', item: 'Sábana manchada', amount: 90, by: 'Carla Mendoza', state: 'review', note: 'Mancha de vino, no sale con lavado.' },
   { id: 'INC-0145', date: '30 oct', room: '203', item: 'Control remoto perdido', amount: 60, by: 'Carla Mendoza', state: 'review', note: 'No estaba en la habitación al revisar.' },
   { id: 'INC-0144', date: '29 oct', room: '304', item: 'Grifo con fuga', amount: 0, by: 'María Rodríguez', state: 'open', note: 'Mantenimiento. No lleva cargo al huésped.' },
-  { id: 'INC-0143', date: '26 oct', room: '303', item: 'Colchón manchado', amount: 380, by: 'Ana López', state: 'closed', note: 'Cargo aprobado y cobrado en la salida.' },
+  { id: 'INC-0143', date: '26 oct', room: '303', item: 'Colchón manchado', amount: 380, by: 'Ana Villanueva', state: 'closed', note: 'Cargo aprobado y cobrado en la salida.' },
   { id: 'INC-0142', date: '22 oct', room: '206', item: 'Vidrio de ventana roto', amount: 240, by: 'María Rodríguez', state: 'closed', note: 'Descontado del depósito de garantía.' },
 ]
 export const LOST: Lost[] = [
@@ -162,7 +162,7 @@ export const TEAM = [
   { name: 'Jorge Velásquez', email: 'jorge.velasquez@hotel-name.com', role: 'Admin de hotel', status: 'Activo' },
   { name: 'María Rodríguez', email: 'maria.rodriguez@hotel-name.com', role: 'Recepción', status: 'Activo' },
   { name: 'Carla Mendoza', email: 'carla.mendoza@hotel-name.com', role: 'Housekeeping', status: 'Activo' },
-  { name: 'Ana López', email: 'ana.lopez@hotel-name.com', role: 'Housekeeping', status: 'Invitación pendiente' },
+  { name: 'Ana Villanueva', email: 'ana.villanueva@hotel-name.com', role: 'Housekeeping', status: 'Invitación pendiente' },
 ]
 
 // Series del mes de octubre. Se generan de forma fija para que los totales cuadren.
